@@ -48,9 +48,10 @@ section {
 header {
     display: flex;
     justify-content: flex-end;
-    background-color: var(--color3);
+    background-color: magenta;
     height: var(--header-height);
     box-shadow: var(--shadow);
+    width: 100%;
 }
 
 footer {
@@ -60,14 +61,13 @@ footer {
     box-shadow: var(--shadow);
 }
 
-
 h2 {
     font-size: 1.8rem;
     font-weight: bold;
 }
 
-.gutter-right {
-    margin-right: 20px;
+#numberwang-header {
+   align-items:var(--header-height);
 }
 
 .main-logo {
@@ -75,7 +75,8 @@ h2 {
 }
 
 header img {
-    height: var(--header-height);
+    height: 200%;
+    align-items: center;
 }
 
 p {
@@ -92,22 +93,3 @@ footer {
     background-color: var(--color3);
     box-shadow: var(--shadow);
 }
-  
-  @keyframes pulse {
-    20% {
-      transform: rotate3d(-10, -10, -10, 50deg) scale(1.2);
-    }
-
-    40% {
-        transform: rotate3d(10, 10, -10, 50deg) scale(1);
-    }
-
-    60% {
-        transform: rotate3d(-10, 10, 10, 50deg) scale(1.2);
-      }
-
-    80% {
-        transform: rotate3d(10, 10, 10, 50deg) scale(1);
-    }
-
-  }
