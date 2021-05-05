@@ -1,7 +1,7 @@
 
 body {
 /* CSS HSL */
---color1: hsla(333, 93%, 56%, 1);
+--color1: rgb(255, 89, 164);
 --color2: hsla(309, 77%, 40%, 1);
 --color3: hsla(276, 91%, 38%, 1);
 --color4: hsla(268, 88%, 36%, 1);
@@ -9,7 +9,7 @@ body {
 --color6: hsla(258, 86%, 34%, 1);
 --color7: hsla(243, 57%, 50%, 1);
 --color8: hsla(229, 83%, 60%, 1);
---color9: hsla(212, 84%, 61%, 1);
+--color9: rgb(0, 119, 255);
 --color10: hsla(194, 85%, 62%, 1);
     
     --header-height: 80px;
@@ -46,38 +46,53 @@ section {
 
 header {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     background-color: magenta;
     height: var(--header-height);
     box-shadow: var(--shadow);
     width: 100%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 50px;
+    color: var(--color9);
+    position: fixed;
+    height: 8%;
 }
 
 footer {
     display: flex;
     justify-content: flex-end;
-    background-color: var(--color3);
+    background-color: var(--color9);
     box-shadow: var(--shadow);
 }
 
 h2 {
-    font-size: 3rem;
+    font-size: 2.8rem;
     font-weight: bold;
-    color: var(--color10)
+    color: var(--color9);
+    font-weight: bolder;
+    padding: 10px;
+    text-decoration: var(--shadow);
+    width: 80%;
+    text-align: center;
+    font-family: cursive;
 }
 
 h3 {
     font-size: 20px;
     font-weight: bolder;
-    color: var(--color9)
+    color: var(--color9);
+    background-color: var(--color6);
+    padding: 10px;
+    border-radius: 10px;
 }
 
 #numberwang-header {
-   align-items:var(--header-height);
+    align-items: var(--header-height);
 }
 
 .main-logo {
     animation: pulse 5s infinite ease-in-out;
+    margin-top: 30px;
 }
 
 header img {
@@ -89,7 +104,7 @@ p {
     margin: var(--gutter);
     color: var(--color7);
 }
-  
+
 footer {
     position: fixed;
     width: 100%;
@@ -97,16 +112,51 @@ footer {
     height: var(--footer-height);
     display: flex;
     justify-content: flex-end;
-    background-color: var(--color3);
+    background-color: var(--color10);
     box-shadow: var(--shadow);
+    color: var(--color5);
 }
 
-#list {
+#list, .instructions {
     list-style: decimal;
-}
-.instructions {
+    color: var(--color2);
     text-align: justify;
+}
+
+#numberwang-button {
+    background-color: magenta;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 10px;
+    margin: 10px;
+    font-size: 20px;
+    color: var(--color7);
+    font-weight: bolder;
+    border: 10px double var(--color9);
+    border-radius: 20px;
+    font-kerning: 2px;
+    text-decoration: var(--shadow);
 }
 #reset-button {
     display: none;
+    background-color: var(--color1);
+    padding: 5px;
+    border: 10px double var(--color9);
+    border-radius: 20px;
+    font-kerning: 2px;
+    color: var(--color9);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bolder;
+}
+
+#winner {
+    display: none;
+    width: 80%;
+}
+
+#attempts {
+    font-family: cursive;
+    font-size: 25px;
+    color: magenta;
+    padding: 10px;
+    text-align: center;
 }
