@@ -7,16 +7,20 @@ const result = document.getElementById('feedback-numberwang');
 const wrongGuess = document.getElementById('attempts');
 
 // initialize state
-let input = userInput.value;
+const guess = Number(userInput.value);
+let numGuess = 0;
+let correctNumber = Math.ceil(Math.random() * 20);
 
 // set event listeners to update state and DOM
 button.addEventListener('click', () => {
-    
-    if (compareNumbers(input) === 0) {
-        result.textContent = 'That is Numberwang!';
-    } else if (compareNumbers(input) === 1) {
-        wrongGuess.textContent = '${result} is too damn high. No Numberwang!';
-    } else if (compareNumbers(input) === -1) {
-        wrongGuess.textContent = '${result} is too low- no Numberwang for you!';
+    console.log(correctNumber);
+    numGuess = numGuess + 1;
+    if (compareNumbers(guess, correctNumber) === 0) {
+        result.textContent = 'That is Numberwang! You got it in ' + numGuess + ' tries!';
+    } else if (compareNumbers(guess, correctNumber) === 1) {
+        wrongGuess.textContent = guess + ' is too damn high. No Numberwang! You have tried ' + numGuess + ' times.';
+    } else if (compareNumbers(guess, correctNumber) === -1) {
+        wrongGuess.textContent = guess + ' is too low- no Numberwang for you! You have made ' + numGuess + ' attempts';
     }
+    console.log(compareNumbers(guess, correctNumber));
 });

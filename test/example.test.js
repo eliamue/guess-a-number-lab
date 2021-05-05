@@ -12,8 +12,8 @@ test('Too low of number guessed and user told it is too low', (expect) => {
     //Act 
     // Call the function you're testing and set the result to a const
     const actual = compareNumbers(1, 1);
-    const high = compareNumbers(1, 1);
-    const low = compareNumbers(1, 1);
+    const high = compareNumbers(2, 1);
+    const low = compareNumbers(0, 1);
     //Expect
     // Make assertions about what is expected versus the actual result
     expect.equal(actual, expectedCorrect);

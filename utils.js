@@ -1,5 +1,5 @@
-export function compareNumbers(guess) {
-    let correctNumber = Math.ceil(Math.random() * 20);
+export function compareNumbers(guess, correctNumber) {
+    
     if (guess < correctNumber) {
         return -1;
 
