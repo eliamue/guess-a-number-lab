@@ -5,6 +5,7 @@ const userInput = document.getElementById('numberwang-input');
 const button = document.getElementById('numberwang-button');
 const result = document.getElementById('attempts');
 const wrongGuess = document.getElementById('attempts');
+const resetButton = document.getElementById('reset-button');
 
 // initialize state
 
@@ -18,10 +19,19 @@ button.addEventListener('click', () => {
 
     if (compareNumbers(guess, correctNumber) === 0) {
         result.textContent = 'That is Numberwang! You got it in ' + numGuess + ' tries!';
+        resetButton.style.display = 'block';
     } else if (compareNumbers(guess, correctNumber) === 1) {
         wrongGuess.textContent = guess + ' is too damn high. No Numberwang! You have tried ' + numGuess + ' times.';
+        wrongGuess.style.display = 'block';
     } else if (compareNumbers(guess, correctNumber) === -1) {
         wrongGuess.textContent = guess + ' is too low- no Numberwang for you! You have made ' + numGuess + ' attempts';
+        wrongGuess.style.display = 'block';
     }
     console.log(compareNumbers(guess, correctNumber));
+});
+
+resetButton.addEventListener('click', () => {
+    numGuess = 0;
+    wrongGuess.style.display = 'none';
+    correctNumber = Math.ceil(Math.random() * 20);
 });

@@ -1,17 +1,16 @@
 
 body {
-    /* https://coolors.co/generate and click export -> scss to get the colors to copy and paste below*/
-    /* --color1: hsla(349, 69%, 76%, 1);
-    --color2: hsla(207, 67%, 44%, 1);
-    --color3: hsla(200, 61%, 56%, 1);
-    --color4: hsla(187, 41%, 94%, 1);
-    --color5: hsla(170, 28%, 95%, 1); */
-
-    /* --color1: hsla(45, 86%, 83%, 1);
-    --color2: hsla(135, 65%, 98%, 1);
-    --color3: hsla(315, 37%, 86%, 1);
-    --color4: hsla(45, 73%, 98%, 1);
-    --color5: hsla(224, 40%, 79%, 1); */
+/* CSS HSL */
+--color1: hsla(333, 93%, 56%, 1);
+--color2: hsla(309, 77%, 40%, 1);
+--color3: hsla(276, 91%, 38%, 1);
+--color4: hsla(268, 88%, 36%, 1);
+--color5: hsla(263, 87%, 35%, 1);
+--color6: hsla(258, 86%, 34%, 1);
+--color7: hsla(243, 57%, 50%, 1);
+--color8: hsla(229, 83%, 60%, 1);
+--color9: hsla(212, 84%, 61%, 1);
+--color10: hsla(194, 85%, 62%, 1);
     
     --header-height: 80px;
     --shadow: 0px 10px 20px -12px rgba(0,0,0,0.45);
@@ -62,13 +61,15 @@ footer {
 }
 
 h2 {
-    font-size: 1.8rem;
+    font-size: 3rem;
     font-weight: bold;
+    color: var(--color10)
 }
 
 h3 {
     font-size: 20px;
     font-weight: bolder;
+    color: var(--color9)
 }
 
 #numberwang-header {
@@ -86,6 +87,7 @@ header img {
 
 p {
     margin: var(--gutter);
+    color: var(--color7);
 }
   
 footer {
@@ -104,4 +106,7 @@ footer {
 }
 .instructions {
     text-align: justify;
+}
+#reset-button {
+    display: none;
 }
