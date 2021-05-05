@@ -148,7 +148,7 @@ footer {
     font-weight: bolder;
 }
 
-#winner {
+#winner, #wangernumb {
     display: none;
     width: 80%;
 }
