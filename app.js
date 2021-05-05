@@ -1,21 +1,23 @@
 // import functions and 
-//import { getGuessedNumber(guess) } from './utils.js';
+import { compareNumbers } from './utils.js';
 // grab DOM elements
-const guess = document.getElementById('numberwang-input');
+const userInput = document.getElementById('numberwang-input');
 const button = document.getElementById('numberwang-button');
-const display = document.getElementById('feedback-numberwang');
+const result = document.getElementById('feedback-numberwang');
+const wrongGuess = document.getElementById('remaining-tries');
+
 
 // initialize state
-let correctNumber = Math.ceil(Math.random() * 20);
+const input = userInput.value;
+
 // set event listeners to update state and DOM
 button.addEventListener('click', () => {
-    if (guess <= correctNumber) {
-        return '${guess} is too low! No Numberwang for you!';
-
-    } else if (guess >= correctNumber) {
-        return 'That guess is too damn high! ${guess} is NOT Numberwang!';
-
-    } else {
-        return 'Congratulations, ${guess} is Numberwang!';
+    
+    if (compareNumbers(input) === 0) {
+        result.textContent = 'That is Numberwang!';
+    } else if (compareNumbers(input) === 1) {
+        wrongGuess.textContent = 'Too Damn High';
+    } else if (compareNumbers(input) === -1) {
+        wrongGuess.textContent = 'Low, get low get low';
     }
 });

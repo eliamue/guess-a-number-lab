@@ -1,46 +1,22 @@
 // IMPORT MODULES under test here:
-// import { example } from '../example.js';
+import { compareNumbers } from '../utils.js';
 
 const test = QUnit.test;
 
 test('Too low of number guessed and user told it is too low', (expect) => {
     //Arrange
     // Set up your arguments and expectations
-    const expected = 'toolow';
-    
+    const expectedCorrect = 0;
+    const expectedHigh = 1;
+    const expectedLow = -1;
     //Act 
     // Call the function you're testing and set the result to a const
-    const actual = getGuess;
-
+    const actual = compareNumbers(1, 1);
+    const high = compareNumbers(1, 1);
+    const low = compareNumbers(1, 1);
     //Expect
     // Make assertions about what is expected versus the actual result
-    expect.equal(actual, expected);
-});
-
-test('Correct number guessed and user is told it is correct', (expect) => {
-    //Arrange
-    // Set up your arguments and expectations
-    const expected = 'toolow';
-    
-    //Act 
-    // Call the function you're testing and set the result to a const
-    const actual = getGuess;
-
-    //Expect
-    // Make assertions about what is expected versus the actual result
-    expect.equal(actual, expected);
-});
-
-test('Too low of number guessed and user told it is too low', (expect) => {
-    //Arrange
-    // Set up your arguments and expectations
-    const expected = 'toolow';
-    
-    //Act 
-    // Call the function you're testing and set the result to a const
-    const actual = getGuess;
-
-    //Expect
-    // Make assertions about what is expected versus the actual result
-    expect.equal(actual, expected);
+    expect.equal(actual, expectedCorrect);
+    expect.equal(high, expectedHigh);
+    expect.equal(low, expectedLow);
 });
