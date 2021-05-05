@@ -1,8 +1,9 @@
 // import functions and 
-import { getGuessedNumber(guess) } from './utils.js';
+//import { getGuessedNumber(guess) } from './utils.js';
 // grab DOM elements
 const guess = document.getElementById('numberwang-input');
 const button = document.getElementById('numberwang-button');
+const display = document.getElementById('feedback-numberwang');
 
 // initialize state
 let correctNumber = Math.ceil(Math.random() * 20);

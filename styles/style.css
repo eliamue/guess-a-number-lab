@@ -66,6 +66,11 @@ h2 {
     font-weight: bold;
 }
 
+h3 {
+    font-size: 20px;
+    font-weight: bolder;
+}
+
 #numberwang-header {
    align-items:var(--header-height);
 }
@@ -92,4 +97,11 @@ footer {
     justify-content: flex-end;
     background-color: var(--color3);
     box-shadow: var(--shadow);
+}
+
+#list {
+    list-style: decimal;
+}
+.instructions {
+    text-align: justify;
 }
