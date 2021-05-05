@@ -4,11 +4,10 @@ import { compareNumbers } from './utils.js';
 const userInput = document.getElementById('numberwang-input');
 const button = document.getElementById('numberwang-button');
 const result = document.getElementById('feedback-numberwang');
-const wrongGuess = document.getElementById('remaining-tries');
-
+const wrongGuess = document.getElementById('attempts');
 
 // initialize state
-const input = userInput.value;
+let input = userInput.value;
 
 // set event listeners to update state and DOM
 button.addEventListener('click', () => {
@@ -16,8 +15,8 @@ button.addEventListener('click', () => {
     if (compareNumbers(input) === 0) {
         result.textContent = 'That is Numberwang!';
     } else if (compareNumbers(input) === 1) {
-        wrongGuess.textContent = 'Too Damn High';
+        wrongGuess.textContent = '${result} is too damn high. No Numberwang!';
     } else if (compareNumbers(input) === -1) {
-        wrongGuess.textContent = 'Low, get low get low';
+        wrongGuess.textContent = '${result} is too low- no Numberwang for you!';
     }
 });
