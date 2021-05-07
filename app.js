@@ -33,6 +33,8 @@ button.addEventListener('click', () => {
         result.textContent = 'You got Numberwang in ' + numGuess + ' tries!';
         winImg.style.display = 'block';
         resetButton.style.display = 'block';
+        button.disabled = true;
+
     } else if (compareNumbers(guess, correctNumber) === 1) {
         wrongGuess.textContent = guess + ' is too damn high. No Numberwang! You have tried ' + numGuess + ' times and you have ' + countGuess + ' tries left';
         wrongGuess.style.display = 'block';
@@ -49,4 +51,5 @@ resetButton.addEventListener('click', () => {
     correctNumber = Math.ceil(Math.random() * 20);
     winImg.style.display = 'none';
     loseImg.style.display = 'none';
+    button.disabled = false;
 });
