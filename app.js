@@ -45,6 +45,7 @@ button.addEventListener('click', () => {
 
 resetButton.addEventListener('click', () => {
     numGuess = 0;
+    countGuess = 5;
     wrongGuess.style.display = 'none';
     correctNumber = Math.ceil(Math.random() * 20);
     winImg.style.display = 'none';
