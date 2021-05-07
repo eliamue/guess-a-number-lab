@@ -5,7 +5,7 @@ body {
 --color2: hsla(309, 77%, 40%, 1);
 --color3: hsla(276, 91%, 38%, 1);
 --color4: hsla(268, 88%, 36%, 1);
---color5: hsla(263, 87%, 35%, 1);
+--color5: hsla(263, 87%, 35%, 0.5);
 --color6: hsla(258, 86%, 34%, 1);
 --color7: hsla(243, 57%, 50%, 1);
 --color8: hsla(229, 83%, 60%, 1);
@@ -19,6 +19,9 @@ body {
     
     font-family: 'Titillium Web', sans-serif;
     background-color: var(--color2);
+    background-image: url('https://teenytownplayland.com/wp-content/uploads/bfi_thumb/numbers-1-37psb5jvzpso1xy5zkcdmy@2x.png');
+    background-repeat: repeat;
+    background-size: auto;
 }
 
 main {
@@ -65,6 +68,12 @@ footer {
     box-shadow: var(--shadow);
 }
 
+.numbersTransparent {
+    height: 600px; 
+    width: 850px;
+    background-image: ;
+}
+
 h2 {
     font-size: 2.8rem;
     font-weight: bold;
@@ -79,7 +88,7 @@ h2 {
 
 .glow {
         font-size: 80px;
-        color: #fff;
+        color: rgb(97, 135, 247);
         text-align: center;
         -webkit-animation: glow 1s ease-in-out infinite alternate;
         -moz-animation: glow 1s ease-in-out infinite alternate;
@@ -92,6 +101,13 @@ h2 {
         to {
           text-shadow: 0 0 20px #fff, 0 0 30px #FF4DA6, 0 0 40px #FF4DA6, 0 0 50px #FF4DA6, 0 0 60px #FF4DA6, 0 0 70px #FF4DA6, 0 0 80px #FF4DA6;
          }
+}
+
+.glow2 {
+    font-size: 30px;
+    color: rgb(91, 230, 248);
+    text-align: center;
+    text-shadow: 2px 2px #fa27cc;
 }
 
 h3 {
@@ -176,4 +192,8 @@ footer {
     color: magenta;
     padding: 10px;
     text-align: center;
+}
+
+.importantStuff{
+    position: relative;
 }
