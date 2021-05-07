@@ -42,7 +42,6 @@ button.addEventListener('click', () => {
         wrongGuess.textContent = guess + ' is too low- no Numberwang for you! You have made ' + numGuess + ' attempts and you have ' + countGuess + ' tries left';
         wrongGuess.style.display = 'block';
     }
-    console.log(compareNumbers(guess, correctNumber));
 });
 
 resetButton.addEventListener('click', () => {
